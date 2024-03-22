@@ -18,7 +18,7 @@
 - 👯 I’m looking to collaborate on **Computer Vision and Supervised Learning projects**.
 - 🤝 I’m looking for help with **object recognition, detection, and image classification**.
 - 💬 Ask me about **Python, C/C++, ML stuff**.
-- 📫 How to reach me: **Discord [username: sanyogm_46]**.
+- 📫 How to reach me: **[Discord](https://discordapp.com/users/1145788262582063175)**.
 
 <h3 align="left">Connect with Me</h3>
 
@@ -40,9 +40,9 @@
 </div>
 <p>       </p>
 
-<br>
+<br> <br><br> <br>
 
-<div style="margin-top: 20px;" align="center">
+<div align="center">
   <a href="https://holopin.io/@darkraidercb">
     <img src="https://holopin.me/darkraidercb" alt="Holopin Badges" />
   </a>
