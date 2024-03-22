@@ -5,21 +5,21 @@
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=darkraidercb" alt="darkraidercb" /></a> </p>
 
-- 🔭 I’m currently working on **basic ML projects**
+- 🔭 I’m currently working on **ML projects.**
 
 - 🌱 I’m currently learning **Matplotlib, Scikit-learn. About to start Tensorflow.**
 
-- 👯 I’m looking to collaborate on **computer vision and supervised learning projects**
+- 👯 I’m looking to collaborate on **Computer Vision and Supervised Learning projects.**
 
-- 🤝 I’m looking for help with **object recognition and detection**
+- 🤝 I’m looking for help with **object recognition, detection and image classification.**
 
-- 💬 Ask me about **Python, C/C++, ML stuff**
+- 💬 Ask me about **Python, C/C++, ML stuff.**
 
-- 📫 How to reach me **Discord [username: sanyogm_46]**
+- 📫 How to reach me **Discord [username: sanyogm_46].**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/sanyog mishra" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sanyog mishra" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/sanyog-mishra-6bb38425a/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sanyog mishra" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
