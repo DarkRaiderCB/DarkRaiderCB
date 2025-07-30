@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1580px" height="650px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key {fill: #953800;}
+.value {fill: #0a3069;}
+.addColor {fill: #1a7f37;}
+.delColor {fill: #cf222e;}
+.cc {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="1580px" height="650px" fill="#f6f8fa" rx="15"/>
+<text x="15" y="10" fill="#24292f" class="ascii">
+    <tspan x="10" dy="1.2em">  ########**%#*++****++++++++++++++++++*###%#####*++++++++++++++++++++*************+++++++++++++++  </tspan>
+    <tspan x="10" dy="1.2em">  #######**###*++****++++++++++%@@@@@@@@@@@@@@@@@@@@@%#+++++++++++++*#%@@@@@@@@@@@%########%%%%%%%  </tspan>
+    <tspan x="10" dy="1.2em">  #######**###*++****++++++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@#++++++++++**#%@@@@@@@%#%%*+++++++++#%#**  </tspan>
+    <tspan x="10" dy="1.2em">  ######***###+++****+++++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#++***++++*#@@@@@@%**##*##*+=++++=*%*++  </tspan>
+    <tspan x="10" dy="1.2em">  ######***###+++****++++++#@@@@@@@@@%@@%%%%@@@@@@@@@@@@@@@@@@@@@@%*+*#@@@@@#*##*###**##*++==*%*+*  </tspan>
+    <tspan x="10" dy="1.2em">  ######***###+++****+++++++@#*****************%@@@@@@@@@@@@@@@@@@@%+*#@@####%#*##*###*###*+=*#*++  </tspan>
+    <tspan x="10" dy="1.2em">  #####****###+++****+++++++#******************#@@@@@@@@@@@@@@@@@@@@@%%@@%##%@%#%*##*###***#*+#+++  </tspan>
+    <tspan x="10" dy="1.2em">  #%###**#*###+++****++++++@%#***###%@@@@@@%#**#@@@@@@@@@@@@@@@@@@@@@@@@@@##%@@@@%##*%%%%##**+#+=+  </tspan>
+    <tspan x="10" dy="1.2em">  #%####%#*###+++****++++*#@@@@#*%@@@@@@@@@@@%**#@@@@@@@@@@@@@@@@@@@@@%@@@%*%@%@@@@%%%%%##***+#+==  </tspan>
+    <tspan x="10" dy="1.2em">  @%%####**###+++****++%@@%%@@@@@@@%#@@##%%@@@@%%%@@@@@@@@@@@@@@@@@@@@%@@@%*#**##%%%%##******+%+==  </tspan>
+    <tspan x="10" dy="1.2em">  %#*******###*++****++#@**#@@*@#%@#*%@*==*%@*###%%@@@@@@@@@@@@@@@@%@%%@@@@%*****#%%#*******%%%%##  </tspan>
+    <tspan x="10" dy="1.2em">  #*******####+++****+++@++*#%#**#@#**#****@#******@@@%@@@%@@@@@@@@%+#%@@@@%%#****##**********%*=+  </tspan>
+    <tspan x="10" dy="1.2em">  #******#####+++****+++#%#%%#****%@%####%@%******#@@@@@@@%@@@@@@@%*+#%@@@@%%%##***#*********+%+==  </tspan>
+    <tspan x="10" dy="1.2em">  #*****######+++*****+++++####%%###*#####********@@@@@%@%%@@@@@@++++#@@@@@%%#*#**#*********##%+==  </tspan>
+    <tspan x="10" dy="1.2em">  #****#######+++*****+++++#%@@@@@@%#***********#@@@@%%%%@@@@@@@%++++#@@@@@%%#**++=*#********#@%=-  </tspan>
+    <tspan x="10" dy="1.2em">  #***########+++******+++@@@@@@@@@@@@###****##@@@@@@@@@@@@@@@@@@%+++#@@@@@%%%**++==********#@@@#=  </tspan>
+    <tspan x="10" dy="1.2em">  ############*++*******++*%@#**#%@@@@@@#*##@@@@@@@@@%%%@@@@@@@++++++#@@@@@%%%**++-=@%**#%@@@@@@@*  </tspan>
+    <tspan x="10" dy="1.2em">  #***########*++*******++++@#@@@@#****%#%@@@@@@@@@@@%%%@@@@@@@#+++++#@@@@@@%%*#***#@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  #**#########+++*********+#@@@@@@%###%@@@@@@@@@@@@%%%%%%@@@#++++++++%@@@@@%%#**++==*@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  ##*#########+++****##%@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%@@@@@@%#####@@@@@@%#%**++---@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  #############%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%@@@@@@@@@@@@@@@@@@@%%**+*==+@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  ########%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@#*++==%@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  ####%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@+=@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  *#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  %@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@%%%@@%%%%%%%%%%%%%%@@%%%@@#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@@@@@@@@@#**#%##%%%%@@@@@%%%%@@@@@%%%%%%#**#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@@@@@@@#*****#*###%%%%%%%%@%%%%%%%%%%%%#*****#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@@@@@%**************#%%%%%%%%%%%%%%%%%#*********%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@@@@*******************##%%%%%%%###%%#************%@@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@@@*************************##***#%#***************#@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@@%#*****************************##******************@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">  @@@@@@@@@@@@@@@@@%%**************************************************@@@@@@@@@@@@@@@@@@@@@@@@@@@  </tspan>
+    <tspan x="10" dy="1.2em">                                                                                                    </tspan>
+</text>
+<text x="1000" y="30" fill="#24292f" style="font-family: Consolas, monospace; font-size: 14px;">
+  <tspan x="1000" y="30">sanyog@darkraider</tspan> ——————————————————————————————————————————————————————
+  <tspan x="1000" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">Linux, Windows 11, Android 14</tspan>
+  <tspan x="1000" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ........................................... </tspan><tspan class="value">21 years, 8 months</tspan>
+  <tspan x="1000" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">Indian Institute of Information Technology</tspan>
+  <tspan x="1000" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">AI Research Student | Engineer</tspan>
+  <tspan x="1000" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">VSCode, Cursor, Jupyter</tspan>
+  <tspan x="1000" y="150" class="cc">. </tspan>
+  <tspan x="1000" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">Python, C/C++, Typescript</tspan>
+  <tspan x="1000" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Data</tspan>:<tspan class="cc"> ...................................... </tspan><tspan class="value">SQL, YAML, JSON</tspan>
+  <tspan x="1000" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">English, Hindi</tspan>
+  <tspan x="1000" y="230" class="cc">. </tspan>
+  <tspan x="1000" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">Building AI agents, LLM experiments, MLOps</tspan>
+  <tspan x="1000" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Hardware</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">Fitness, Overclocking</tspan>
+  <tspan x="1000" y="290" class="cc">. </tspan>
+  <tspan x="1000" y="310">- Contact</tspan> ——————————————————————————————————————————————————————————————
+  <tspan x="1000" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ........................................... </tspan><tspan class="value">sanyog713@gmail.com</tspan>
+  <tspan x="1000" y="350" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">sanyog-mishra-6bb38425a</tspan>
+  <tspan x="1000" y="370" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ................................................. </tspan><tspan class="value">DarkRaiderCB</tspan>
+  <tspan x="1000" y="390" class="cc">. </tspan><tspan class="key">Website</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">sanyogportfolio.vercel.app</tspan>
+  <tspan x="1000" y="410" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> .................................................. </tspan><tspan class="value">sanyogm_46</tspan>
+  <tspan x="1000" y="430" class="cc">. </tspan><tspan class="key">X</tspan>:<tspan class="cc"> ....................................................... </tspan><tspan class="value">@SanyogM_11</tspan>
+  <tspan x="1000" y="450" class="cc">. </tspan><tspan class="key">Reddit</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">u/Sad-Significance8574</tspan>
+  <tspan x="1000" y="470" class="cc">. </tspan>
+  <tspan x="1000" y="490">- GitHub Stats</tspan> —————————————————————————————————————————————————————————
+  <tspan x="1000" y="510" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ........................................................... </tspan><tspan class="value">55+</tspan>
+  <tspan x="1000" y="530" class="cc">. </tspan><tspan class="key">Contributed to</tspan>:<tspan class="cc"> .................................................. </tspan><tspan class="value">10+</tspan>
+  <tspan x="1000" y="550" class="cc">. </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ............................................................ </tspan><tspan class="value">1+</tspan>
+  <tspan x="1000" y="570" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ........................................................ </tspan><tspan class="value">400+</tspan>
+  <tspan x="1000" y="590" class="cc">. </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ......................................................... </tspan><tspan class="value">7</tspan>
+  <tspan x="1000" y="610" class="cc">. </tspan><tspan class="key">PRs</tspan>:<tspan class="cc"> .............................................................. </tspan><tspan class="value">16</tspan>
+  <tspan x="1000" y="630" class="cc">. </tspan><tspan class="key">Lines of Code</tspan>:<tspan class="cc"> ................................................ </tspan><tspan class="value">50000+</tspan>
+</text>
+</svg>
