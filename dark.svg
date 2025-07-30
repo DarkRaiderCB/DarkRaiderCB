@@ -52,7 +52,7 @@ text, tspan {white-space: pre;}
     <tspan x="10" dy="1.2em">                                                                                                    </tspan>
 </text>
 <text x="1000" y="30" fill="#c9d1d9" style="font-family: Consolas, monospace; font-size: 18px;">
-  <tspan x="1000" y="30">sanyog@darkraider</tspan> ——————————————————————————————————————
+  <tspan x="1000" y="30">sanyog@mishra</tspan> ——————————————————————————————————————————
   <tspan x="1000" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">Linux (Debian), Windows, Android</tspan>
   <tspan x="1000" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">21 years, 8 months</tspan>
   <tspan x="1000" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Indian Institute of Information Technology</tspan>
