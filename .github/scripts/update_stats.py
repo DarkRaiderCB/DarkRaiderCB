@@ -46,12 +46,6 @@ def graphql(query, variables):
     return body["data"]
 
 
-def rounded(n, step):
-    """400 -> '400+' style display, floored to the nearest step."""
-    floored = (n // step) * step
-    return f"{floored}+" if floored < n else f"{n}"
-
-
 def fetch_stats():
     data = graphql(
         """
@@ -63,7 +57,7 @@ def fetch_stats():
             repositoriesContributedTo(
               contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, PULL_REQUEST_REVIEW, REPOSITORY]
             ) { totalCount }
-            repositories(ownerAffiliations: OWNER, first: 100) {
+            repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
               totalCount
               nodes { name isFork stargazerCount }
             }
@@ -98,17 +92,17 @@ def fetch_stats():
         commits += cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
 
     stats = {
-        "Repos": rounded(data["repositories"]["totalCount"], 5),
-        "Contributed to": rounded(data["repositoriesContributedTo"]["totalCount"], 5),
+        "Public Repos": str(data["repositories"]["totalCount"]),
+        "Contributed to": str(data["repositoriesContributedTo"]["totalCount"]),
         "Stars": str(stars),
-        "Commits": rounded(commits, 50),
+        "Commits": str(commits),
         "Followers": str(data["followers"]["totalCount"]),
         "PRs": str(data["pullRequests"]["totalCount"]),
     }
 
     loc = fetch_loc([r["name"] for r in data["repositories"]["nodes"] if not r["isFork"]])
     if loc is not None:
-        stats["Lines of Code"] = rounded(loc, 1000)
+        stats["Lines of Code"] = str(loc)
 
     return stats
 

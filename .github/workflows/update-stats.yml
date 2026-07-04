@@ -25,7 +25,9 @@ jobs:
           # contributions; the default GITHUB_TOKEN covers public data only.
           GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
           GH_LOGIN: DarkRaiderCB
-          BIRTHDATE: "2004-11-01" # TODO: set your real birthdate for the Uptime line
+          # Set a BIRTHDATE repo secret (YYYY-MM-DD) to enable the Uptime line;
+          # if unset, the Uptime value in the SVGs is left untouched.
+          BIRTHDATE: ${{ secrets.BIRTHDATE }}
 
       - name: Commit and push if changed
         run: |
