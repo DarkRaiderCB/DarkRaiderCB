@@ -1,0 +1,40 @@
+name: Update stats
+
+on:
+  schedule:
+    - cron: "0 19 * * *" # daily at 19:00 UTC (00:30 IST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update SVG stats
+        run: python .github/scripts/update_stats.py
+        env:
+          # GH_STATS_TOKEN (optional PAT with repo scope) also counts private
+          # contributions; the default GITHUB_TOKEN covers public data only.
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_LOGIN: DarkRaiderCB
+          BIRTHDATE: "2004-11-01" # TODO: set your real birthdate for the Uptime line
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add light.svg dark.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-update stats"
+            git push
+          fi
