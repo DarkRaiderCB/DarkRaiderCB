@@ -17,7 +17,6 @@ import json
 import os
 import re
 import sys
-import time
 import urllib.request
 from datetime import date, datetime, timezone
 
@@ -51,15 +50,19 @@ def fetch_stats():
         """
         query($login: String!) {
           user(login: $login) {
+            id
             createdAt
             followers { totalCount }
             pullRequests { totalCount }
             repositoriesContributedTo(
               contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, PULL_REQUEST_REVIEW, REPOSITORY]
             ) { totalCount }
+            locRepos: repositoriesContributedTo(
+              contributionTypes: [COMMIT], includeUserRepositories: false, first: 100
+            ) { nodes { nameWithOwner } }
             repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
               totalCount
-              nodes { name isFork stargazerCount }
+              nodes { nameWithOwner stargazerCount }
             }
           }
         }
@@ -100,33 +103,69 @@ def fetch_stats():
         "PRs": str(data["pullRequests"]["totalCount"]),
     }
 
-    loc = fetch_loc([r["name"] for r in data["repositories"]["nodes"] if not r["isFork"]])
+    loc_repos = {r["nameWithOwner"] for r in data["repositories"]["nodes"]}
+    loc_repos |= {r["nameWithOwner"] for r in data["locRepos"]["nodes"] if r}
+    loc = fetch_loc(data["id"], sorted(loc_repos))
     if loc is not None:
         stats["Lines of Code"] = str(loc)
 
     return stats
 
 
-def fetch_loc(repo_names):
-    """Net lines authored, from per-repo contributor stats. Returns None on failure."""
+HISTORY_QUERY = """
+query($owner: String!, $name: String!, $authorId: ID!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    defaultBranchRef {
+      target {
+        ... on Commit {
+          history(author: {id: $authorId}, first: 100, after: $cursor) {
+            pageInfo { hasNextPage endCursor }
+            nodes { oid additions deletions }
+          }
+        }
+      }
+    }
+  }
+}
+"""
+
+
+def fetch_loc(author_id, repo_full_names):
+    """Net lines from commits authored by the user on the default branch of
+    every repo they own or have committed to. Commits are deduped by SHA so a
+    commit visible in both a fork and its upstream is counted once. In forks,
+    the author filter means upstream code is never attributed to the user.
+    Returns None on total failure so the existing SVG value is kept."""
+    seen = set()
     total = 0
-    try:
-        for name in repo_names:
-            url = f"https://api.github.com/repos/{LOGIN}/{name}/stats/contributors"
-            for _ in range(5):
-                status, body = api(url)
-                if status != 202:  # 202 = stats still being computed, retry
+    any_ok = False
+    for full_name in repo_full_names:
+        owner, name = full_name.split("/", 1)
+        cursor = None
+        try:
+            while True:
+                repo = graphql(
+                    HISTORY_QUERY,
+                    {"owner": owner, "name": name, "authorId": author_id, "cursor": cursor},
+                )["repository"]
+                ref = repo and repo.get("defaultBranchRef")
+                if not ref:  # empty repo
                     break
-                time.sleep(3)
-            if status != 200 or not isinstance(body, list):
-                continue
-            for contributor in body:
-                if contributor.get("author", {}).get("login") == LOGIN:
-                    for week in contributor.get("weeks", []):
-                        total += week.get("a", 0) - week.get("d", 0)
-    except Exception as exc:
-        print(f"LOC computation failed, keeping existing value: {exc}")
+                history = ref["target"]["history"]
+                for commit in history["nodes"]:
+                    if commit["oid"] not in seen:
+                        seen.add(commit["oid"])
+                        total += commit["additions"] - commit["deletions"]
+                if not history["pageInfo"]["hasNextPage"]:
+                    break
+                cursor = history["pageInfo"]["endCursor"]
+            any_ok = True
+        except Exception as exc:
+            print(f"LOC: skipping {full_name}: {exc}")
+    if not any_ok:
+        print("LOC computation failed for every repo, keeping existing value")
         return None
+    print(f"LOC: {len(seen)} unique commits across {len(repo_full_names)} repos")
     return max(total, 0)
 
 
