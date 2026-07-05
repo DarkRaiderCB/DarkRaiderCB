@@ -6,7 +6,7 @@
 </a>
 
 <p align="center">
-  <sub><i>Building something cool or have an idea? Let's talk.</i></sub>
+  Building something cool or have an idea? Let's talk.
   <br>
   <a href="https://sanyogportfolio.vercel.app">Website</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/sanyog-mishra-6bb38425a">LinkedIn</a> &nbsp;·&nbsp;
