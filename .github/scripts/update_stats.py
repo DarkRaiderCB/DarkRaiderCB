@@ -52,7 +52,6 @@ def fetch_stats():
           user(login: $login) {
             id
             createdAt
-            followers { totalCount }
             pullRequests { totalCount }
             repositoriesContributedTo(
               contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, PULL_REQUEST_REVIEW, REPOSITORY]
@@ -62,7 +61,7 @@ def fetch_stats():
             ) { nodes { nameWithOwner } }
             repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
               totalCount
-              nodes { nameWithOwner stargazerCount }
+              nodes { nameWithOwner }
             }
           }
         }
@@ -70,12 +69,12 @@ def fetch_stats():
         {"login": LOGIN},
     )["user"]
 
-    stars = sum(r["stargazerCount"] for r in data["repositories"]["nodes"])
-
-    # Commit contributions must be queried per year (API limit of 1-year ranges)
+    # Commit and total contributions must be queried per year (API caps each
+    # contributionsCollection range at one year).
     created = datetime.fromisoformat(data["createdAt"].replace("Z", "+00:00"))
     now = datetime.now(timezone.utc)
     commits = 0
+    contributions = 0
     for year in range(created.year, now.year + 1):
         start = max(created, datetime(year, 1, 1, tzinfo=timezone.utc))
         end = min(now, datetime(year, 12, 31, 23, 59, 59, tzinfo=timezone.utc))
@@ -86,6 +85,7 @@ def fetch_stats():
                 contributionsCollection(from: $from, to: $to) {
                   totalCommitContributions
                   restrictedContributionsCount
+                  contributionCalendar { totalContributions }
                 }
               }
             }
@@ -93,13 +93,13 @@ def fetch_stats():
             {"login": LOGIN, "from": start.isoformat(), "to": end.isoformat()},
         )["user"]["contributionsCollection"]
         commits += cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
+        contributions += cc["contributionCalendar"]["totalContributions"]
 
     stats = {
         "Public Repos": str(data["repositories"]["totalCount"]),
         "Contributed to": str(data["repositoriesContributedTo"]["totalCount"]),
-        "Stars": str(stars),
+        "Total Contributions": str(contributions),
         "Commits": str(commits),
-        "Followers": str(data["followers"]["totalCount"]),
         "PRs": str(data["pullRequests"]["totalCount"]),
     }
 
