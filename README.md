@@ -5,6 +5,8 @@
   </picture>
 </a>
 
+<p align="center"><i>Building something cool or have an idea? Let's talk.</i></p>
+
 <p align="center">
   <a href="https://sanyogportfolio.vercel.app">Website</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/sanyog-mishra-6bb38425a">LinkedIn</a> &nbsp;·&nbsp;
